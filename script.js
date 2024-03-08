@@ -25,3 +25,37 @@ for (let i = 1; i <= 10; i++) {
   container.appendChild(select);
   dynamicPilotFields.appendChild(container);
 }
+const dynamicTeamFields = document.getElementById('dynamicTeamFields');
+
+const teams = [
+  'Mercedes', 'Red Bull Racing', 'McLaren', 'Ferrari', 'Aston Martin',
+  'Alpine', 'AlphaTauri', 'Williams', 'Alfa Romeo', 'Haas'
+];
+
+for (let i = 1; i <= 10; i++) {
+  const container = document.createElement('div');
+
+  const label = document.createElement('label');
+  label.setAttribute('for', `t${i}`);
+  label.textContent = `T${i}:`;
+
+  const select = document.createElement('select');
+  select.id = `t${i}`;
+  select.name = `t${i}`;
+
+  // Add default option
+  select.appendChild(new Option('(select one)', ''));
+
+  // Create and append the team options
+  teams.forEach(team => {
+    const optionElement = document.createElement('option');
+    optionElement.value = team.toLowerCase().replace(/\s+/g, '_');
+    optionElement.textContent = team;
+    select.appendChild(optionElement);
+  });
+
+  container.appendChild(label);
+  container.appendChild(select);
+  dynamicTeamFields.appendChild(container);
+}
+
