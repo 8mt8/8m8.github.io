@@ -60,3 +60,12 @@ function populateTeams() {
         teamGuessesFieldset.appendChild(container);
     }
 }
+document.getElementById('accessKey').addEventListener('click', function() {
+    var password = prompt("Please enter the password to access the F1 Results Key:");
+    if (password === "mar1") {
+        window.location.href = 'f1ResultsKey.html';
+    } else {
+        alert("Incorrect password.");
+    }
+});
+
