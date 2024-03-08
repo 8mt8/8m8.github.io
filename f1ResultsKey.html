@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>F1 Results Key</title>
     <link rel="stylesheet" href="style.css">
@@ -9,15 +10,20 @@
 <body>
     <form id="f1ResultsForm">
         <fieldset>
-            <legend>Actual Race Results</legend>
-            <!-- Replicate the structure from the main form for actual results -->
-            <!-- This is a placeholder; you should add the actual fields similar to the guessing game form -->
+            <legend>Driver Results</legend>
+            <!-- JavaScript will populate P1 to P10 driver results here -->
+            <div id="driverResults"></div>
         </fieldset>
-        
-        <!-- Include fieldsets for drivers and teams results similar to the game form -->
-        
+
+        <fieldset>
+            <legend>Team Results</legend>
+            <!-- JavaScript will populate T1 to T10 team results here -->
+            <div id="teamResults"></div>
+        </fieldset>
+
         <button type="submit">Save Results</button>
     </form>
+
+    <script src="resultsScript.js"></script>
 </body>
 </html>
-
