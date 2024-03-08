@@ -2,60 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F1 Game</title>
-    <link rel="stylesheet" href="style.css">
+    <title>F1 Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>F1 Game</h1>
-    <form>
-        <fieldset id="generales">
+    <form id="f1GameForm">
+        <fieldset>
+            <legend>General Information</legend>
             <label for="name">Name:</label>
-<select id="name" name="name">
-    <option value="pablo">Pablo</option>
-    <option value="marcelo">Marcelo</option>
-    <option value="choche">Choche</option>
-    <option value="ander">Ander</option>
-    <option value="eugenio">Eugenio</option>
-    <option value="andres">Andres</option>
-    <option value="jorge">Jorge</option>
-</select>
-<label for="raceCity">Race City:</label>
-<select id="raceCity" name="raceCity">
-    <option value="melbourne">Melbourne - March 20</option>
-    <option value="manama">Manama - March 27</option>
-    <option value="jeddah">Jeddah - April 10</option>
-    <option value="imola">Imola - April 24</option>
+            <select id="name" name="name" required>
+                <option value="marcelo">Marcelo</option>
+                <option value="pablo">Pablo</option>
+                <option value="carlos">Carlos</option>
+                <option value="miguel">Miguel</option>
+                <option value="andres">Andres</option>
+            </select>
+            
+            <label for="race">Race:</label>
+            <label for="race">Race:</label>
+<select id="race" name="race" required>
+    <option value="bahrain">Bahrain - March 20</option>
+    <option value="saudi_arabia">Saudi Arabia - March 27</option>
+    <option value="australia">Australia - April 10</option>
+    <option value="emilia_romagna">Emilia Romagna - April 24</option>
     <option value="miami">Miami - May 8</option>
-    <option value="barcelona">Barcelona - May 22</option>
-    <option value="monte_carlo">Monte Carlo - May 29</option>
-    <option value="baku">Baku - June 12</option>
-    <option value="montreal">Montreal - June 19</option>
-    <option value="le_castellet">Le Castellet - June 26</option>
-    <option value="spielberg">Spielberg - July 10</option>
-    <option value="silverstone">Silverstone - July 17</option>
-    <option value="budapest">Budapest - July 31</option>
-    <option value="spa">Spa - August 28</option>
-    <option value="zandvoort">Zandvoort - September 4</option>
-    <option value="monza">Monza - September 11</option>
-    <option value="singapore">Singapore - September 25</option>
-    <option value="suzuka">Suzuka - October 9</option>
-    <option value="austin">Austin - October 23</option>
-    <option value="mexico_city">Mexico City - October 30</option>
-    <option value="sao_paulo">São Paulo - November 13</option>
-    <option value="abu_dhabi">Abu Dhabi - November 27</option>
+    <option value="spain">Spain - May 22</option>
+    <option value="monaco">Monaco - May 29</option>
+    <option value="azerbaijan">Azerbaijan - June 12</option>
+    <option value="canada">Canada - June 19</option>
+    <option value="britain">Britain - July 3</option>
+    <option value="austria">Austria - July 10</option>
+    <option value="france">France - July 24</option>
+    <option value="hungary">Hungary - July 31</option>
+    <option value="belgium">Belgium - August 28</option>
+    <option value="netherlands">Netherlands - September 4</option>
+    <option value="italy">Italy - September 11</option>
+    <option value="russia">Russia - September 25</option>
+    <option value="singapore">Singapore - October 2</option>
+    <option value="japan">Japan - October 9</option>
+    <option value="usa">USA - October 23</option>
+    <option value="mexico">Mexico - October 30</option>
+    <option value="brazil">Brazil - November 13</option>
+    <option value="abu_dhabi">Abu Dhabi - November 20</option>
 </select>
 
-            
         </fieldset>
-        <fieldset id="pilots">
-            <div id="dynamicPilotFields"></div>
+        
+        <fieldset id="driverGuesses">
+            <legend>Driver Guesses</legend>
+            <!-- JavaScript will populate P1 to P10 driver guesses here -->
         </fieldset>
-        <fieldset id="teams">
-            <div id="dynamicTeamFields"></div>
+        
+        <fieldset id="teamGuesses">
+            <legend>Team Guesses</legend>
+            <!-- JavaScript will populate T1 to T10 team guesses here -->
         </fieldset>
+
+        <button type="submit">Submit Guesses</button>
     </form>
+
     <script src="script.js"></script>
 </body>
 </html>
